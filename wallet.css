@@ -1,0 +1,184 @@
+
+/*wallet.php*/
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f7fa;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 280px; /* Increased width for a larger sidebar */
+    background-color: #2c3e50; /* Dark Blue */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 30px; /* Increased padding for spacing */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-link {
+    color: white;
+    text-decoration: none;
+    padding: 20px 25px; /* Increased padding for bigger links */
+    display: flex;
+    align-items: center;
+    font-size: 22px; /* Bigger font size */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar-link:hover {
+    background-color: #1abc9c; /* Light Green */
+    transform: translateX(5px);
+}
+
+.sidebar-link:active {
+    background-color: #16a085; /* Darker Green */
+}
+
+/* Custom Icons */
+.icon {
+    width: 30px; /* Larger icon size */
+    height: 30px;
+    display: inline-block;
+    margin-right: 20px; /* More space between icon and text */
+    background-size: cover;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 280px; /* Adjusted for bigger sidebar */
+    padding: 30px; /* Increased padding for more space */
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* Wallet Styling */
+.wallet-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Increased gap between elements */
+    margin-top: 70px; /* Increased margin to move content further down */
+}
+
+.wallet-balance {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f1;
+    padding: 30px; /* Increased padding for more space inside */
+    border-radius: 12px; /* Larger border radius */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Bigger shadow for 3D effect */
+    transition: all 0.3s ease;
+}
+
+.wallet-balance h2 {
+    font-size: 48px; /* Larger font size for balance */
+    color: #16a085;
+    margin-top: 15px;
+}
+
+.wallet-actions {
+    background-color: #ecf0f1;
+    padding: 30px; /* Increased padding for wallet actions */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 30px; /* Increased top margin */
+}
+
+.wallet-actions form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wallet-actions label {
+    font-size: 24px; /* Larger label font */
+    color: #34495e;
+    margin-bottom: 15px; /* Increased space between label and input */
+}
+
+.wallet-actions input {
+    width: 300px; /* Increased input width */
+    padding: 15px; /* Larger padding for input */
+    font-size: 20px; /* Larger font size for input */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bigger border radius */
+    margin-bottom: 20px; /* Increased space below the input */
+    transition: border-color 0.3s ease;
+}
+
+.wallet-actions input:focus {
+    border-color: #1abc9c; /* Green focus effect */
+}
+
+.wallet-actions button {
+    padding: 15px 30px; /* Larger button padding */
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Larger border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 20px; /* Larger font size for the button */
+}
+
+.wallet-actions button:hover {
+    background-color: #16a085;
+    transform: translateY(-3px);
+}
+
+.wallet-actions button:active {
+    background-color: #1abc9c;
+    transform: translateY(1px);
+}
+
+/* 3D Hover Effect for Wallet Cards */
+.wallet-info div {
+    transition: all 0.3s ease;
+}
+
+.wallet-info div:hover {
+    transform: translateY(-10px); /* Bigger hover effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px; /* Adjusted for smaller screens */
+    }
+
+    .main-content {
+        margin-left: 250px; /* Adjusted for smaller screens */
+    }
+
+    .wallet-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wallet-balance,
+    .wallet-actions {
+        width: 90%; /* Make wallet content take more space */
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+

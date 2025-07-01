@@ -1,0 +1,220 @@
+
+/*dashboard.php*/
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent body overflow */
+}
+
+/* Container for Sidebar and Main Content */
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent scrolling of wrapper */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable scrolling for sidebar if content exceeds */
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #34495e;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-menu li:hover {
+    background-color: #1abc9c;
+    transform: translateX(5px);
+}
+
+.sidebar-menu li.active {
+    background-color: #16a085;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar Icons */
+.sidebar-menu li a .icon {
+    margin-right: 12px;
+    font-size: 22px;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    width: 100%;
+    height: 100vh;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allow vertical scrolling */
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Dashboard Box Styles */
+.dashboard-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    min-height: 500px;
+    overflow-y: auto;
+}
+
+/* Dashboard Info Section */
+.dashboard-info {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Table Styles (Leaderboard & Coupons) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f8f8f8;
+    color: #2c3e50;
+}
+
+table td {
+    color: #7f8c8d;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Coupons Section */
+.coupons {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.coupons h2 {
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+/* Professional Hover Effects */
+.dashboard-box h1,
+.leaderboard h2,
+.coupons h2 {
+    font-size: 24px;
+    color: #34495e;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .dashboard-box {
+        max-width: 100%;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+}
+
+/* 3D Modern Shadow Effects */
+.sidebar-menu li:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-menu li.active {
+    background-color: #1abc9c;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-box {
+    transition: all 0.3s ease;
+}
+
+.dashboard-box:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
